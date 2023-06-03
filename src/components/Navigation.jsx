@@ -1,3 +1,4 @@
+import '../styles/navigation.css';
 
 function Navigation() {
   return (
