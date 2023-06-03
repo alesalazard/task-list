@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Login></Login>}></Route>
           <Route path='/Register' element={<Register></Register>}></Route>
-          <Route path='/Task' element={<Task text = 'Aprender React'></Task>}></Route>
+          <Route path='/Task' element={<Task></Task>}></Route>
         </Routes>
       </BrowserRouter>
     </>
