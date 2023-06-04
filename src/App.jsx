@@ -2,18 +2,18 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/App.css';
 import Login from './components/Login';
 import Register from './components/Register';
-import Task from './components/Tasks';
+import TaskList from './components/TaskList';
 import Navigation from './components/Navigation';
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+    <BrowserRouter>
       <Navigation />
         <Routes>
-          <Route path='/' element={<Login></Login>}></Route>
-          <Route path='/Register' element={<Register></Register>}></Route>
-          <Route path='/Task' element={<Task></Task>}></Route>
+          <Route path='/' element={<Login />}></Route>
+          <Route path='/Register' element={<Register />}></Route>
+          <Route path='/TaskList' element={<TaskList />}></Route>
         </Routes>
       </BrowserRouter>
     </>
