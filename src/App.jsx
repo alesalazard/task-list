@@ -11,9 +11,9 @@ function App() {
       <BrowserRouter>
       <Navigation />
         <Routes>
-          <Route path='/' element={<Login></Login>}></Route>
-          <Route path='/Register' element={<Register></Register>}></Route>
-          <Route path='/Task' element={<Task></Task>}></Route>
+          <Route path='/' element={<Login />}></Route>
+          <Route path='/Register' element={<Register />}></Route>
+          <Route path='/Task' element={<Task />}></Route>
         </Routes>
       </BrowserRouter>
     </>

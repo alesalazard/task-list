@@ -1,14 +1,13 @@
+import { Link } from 'react-router-dom';
 import '../styles/navigation.css';
 
 function Navigation() {
   return (
-    <>
-      <ul>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/Register' >Register</a></li>
-        <li><a href='/Task'>Tasks</a></li>
-      </ul>
-    </>
+   <nav className='nav'>
+    <Link to='/'>Home</Link>
+    <Link to='/register'>Register</Link>
+    <Link to='/task'>Task List</Link>
+   </nav>
   )
 }
 
