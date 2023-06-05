@@ -6,7 +6,7 @@ function Navigation() {
    <nav className='nav'>
     <Link to='/'>Home</Link>
     <Link to='Register'>Register</Link>
-    <Link to='List'>Lista de Tareas</Link>
+    <Link to='Dashboard'>Lista de Tareas</Link>
    </nav>
   )
 }

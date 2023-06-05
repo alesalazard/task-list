@@ -1,13 +1,9 @@
-import { useState, useContext } from 'react';
-// import { context } from '../context/authContext';
+import { useState } from 'react';
 import TaskForm from './TaskForm';
 import Task from './Task';
-import '../styles/list.css';
+import '../styles/dashboard.css';
  
-function List() {
-
-  // const authContext = useContext(context)
-  // console.log(authContext);
+function Dashboard() {
 
   const [tasks, setTasks] = useState([]);
 
@@ -44,4 +40,4 @@ function List() {
   )
 }
 
-export default List;
+export default Dashboard;
