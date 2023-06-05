@@ -1,22 +1,30 @@
 import { useState } from "react";
-// import { useAuth } from '../context/authContext';
+import { createUser } from "../firebase/firebase";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
+
   const [user, setUser] = useState({
     email: '',
     password: '',
   });
 
-  // const { signup } = useAuth();
-
-  const handleChange = ({target: {name, value}}) =>
-    setUser({...user, [name]: value})
+  const navigate = useNavigate();
   
+  const handleChange = ({ target: {name, value}}) => 
+    setUser({ ...user, [name]: value})
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // signup(user.email, user.password)
-  }
+    console.log(user.email, user.password);
+    try {
+    createUser (user.email, user.password);
+    alert ('Usuario Creado exitosamente')
+    navigate ('/')
+    } catch (error) {
+      alert('No se pudo hacer el registro')
+    }
+  };
 
   return (
     <>
@@ -36,11 +44,20 @@ function Register() {
           <input
             type='password'
             name='password'
-            placeholder='contraseña'
+            placeholder='Contraseña'
             onChange={handleChange}
           />
         </label>
-        {/* <label>Repita su contraseña<input type='password' placeholder='contraseña' /></label> */}
+        {/* falta esta validacion, solo se renderiza */}
+        <label>
+          Repita su contraseña 
+          <input
+            type='password'
+            name='password'
+            placeholder='Repita su Contraseña'
+            onChange={handleChange}
+          />
+        </label>
         <button>Registrar</button>
       </form>
     </>

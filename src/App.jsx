@@ -13,8 +13,8 @@ function App() {
       <Navigation />
         <Routes>
           <Route path='/' element={<Login />}></Route>
-          <Route path='/Register' element={<Register />}></Route>
-          <Route path='/List' element={<List />}></Route>
+          <Route path='/register' element={<Register />}></Route>
+          <Route path='/list' element={<List />}></Route>
         </Routes>
       </BrowserRouter>
     // </AuthProvider>
