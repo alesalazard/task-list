@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import '../styles/task-form.css';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4} from 'uuid';
 
-function TaskForm(props) {
+function TaskForm() {
 
   const [input, setInput] = useState('');
 
@@ -12,19 +12,18 @@ function TaskForm(props) {
 
   const handleSubmit = e => {
     e.preventDefault();
-
     const newTask = {
       id: uuidv4(),
       text: input,
       done: false
     }
-    
-    props.onSubmit(newTask);
+    console.log(newTask);
+    // props.onSubmit(newTask);
   }
 
   return (
     <>
-      <form 
+      <form
         className='task-form'
         onSubmit={handleSubmit}>
         <input 
