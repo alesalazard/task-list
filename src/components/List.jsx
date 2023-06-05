@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+// import { context } from '../context/authContext';
 import TaskForm from './TaskForm';
 import Task from './Task';
 import '../styles/list.css';
  
 function List() {
+
+  // const authContext = useContext(context)
+  // console.log(authContext);
 
   const [tasks, setTasks] = useState([]);
 
