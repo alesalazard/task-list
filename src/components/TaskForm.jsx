@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../styles/task-form.css';
 import { v4 as uuidv4} from 'uuid';
 
-function TaskForm() {
+function TaskForm(props) {
 
   const [input, setInput] = useState('');
 
@@ -18,7 +18,7 @@ function TaskForm() {
       done: false
     }
     console.log(newTask);
-    // props.onSubmit(newTask);
+    props.onSubmit(newTask);
   }
 
   return (

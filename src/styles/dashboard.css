@@ -10,8 +10,8 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 15px;
-  height: 40px;
   background-color: rgb(207, 200, 200);
+  border-radius: 10px;
 }
 
 /* Listas de Tareas */

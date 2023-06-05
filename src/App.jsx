@@ -3,7 +3,7 @@ import './styles/App.css';
 import Login from './components/Login';
 import Register from './components/Register';
 import Navigation from './components/Navigation';
-import List from './components/List';
+import Dashboard from './components/Dashboard';
 // import { AuthProvider } from './context/authContext';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Login />}></Route>
           <Route path='/register' element={<Register />}></Route>
-          <Route path='/list' element={<List />}></Route>
+          <Route path='/dashboard' element={<Dashboard />}></Route>
         </Routes>
       </BrowserRouter>
     // </AuthProvider>
