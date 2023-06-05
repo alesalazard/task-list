@@ -18,9 +18,9 @@ function Register() {
     e.preventDefault();
     console.log(user.email, user.password);
     try {
-    createUser (user.email, user.password);
-    alert ('Usuario Creado exitosamente')
-    navigate ('/')
+      await createUser (user.email, user.password);
+      alert ('Usuario creado exitosamente, ahora loguéate!')
+      navigate ('/')
     } catch (error) {
       alert('No se pudo hacer el registro')
     }
