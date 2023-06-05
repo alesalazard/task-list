@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/App.css';
 import Login from './components/Login';
 import Register from './components/Register';
-import Task from './components/Tasks';
 import Navigation from './components/Navigation';
+import List from './components/List';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Login />}></Route>
           <Route path='/Register' element={<Register />}></Route>
-          <Route path='/Task' element={<Task />}></Route>
+          <Route path='/List' element={<List />}></Route>
         </Routes>
       </BrowserRouter>
     </>
