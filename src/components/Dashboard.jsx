@@ -13,7 +13,21 @@ function Dashboard() {
       const updatedTasks = [task, ...tasks];
       setTasks(updatedTasks);
     }
-    console.log(task.text);
+  }
+
+  const deleteTask = (id) => {
+    const updatedTasks = tasks.filter(task => task.id !==id);
+    setTasks(updatedTasks);
+  }
+
+  const taskDone = (id) => {
+    const updatedTasks = tasks.map(task => {
+      if (task.id === id) {
+        task.done = !task.done;
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
   }
   
   return (
@@ -29,8 +43,8 @@ function Dashboard() {
                 id={task.id}
                 text={task.text}
                 done={task.done}
-                // taskDone={taskDone}
-                // deleteTask={deleteTask}
+                taskDone={taskDone}
+                deleteTask={deleteTask}
               />
             )
           }

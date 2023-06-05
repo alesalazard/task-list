@@ -2,6 +2,7 @@ import '../styles/task.css';
 import { AiOutlineClose } from "react-icons/ai";
 
 function Task ({ id, text, done, taskDone, deleteTask }) {
+
   return (
     <div className={ done ? 'task-container task-done' : 'task-container'}>
       <div
