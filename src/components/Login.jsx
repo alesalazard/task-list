@@ -23,9 +23,9 @@ function Login() {
     try {
       await loginUser(user.email, user.password);
       alert("Comienza a escribir tus tareas");
-      navigate("/list");
+      navigate("/dashboard");
     } catch (error) {
-      alert("Ingrese las credenciales correctas");
+      alert("Ingrese unas credenciales válidas");
     }
   };
 
