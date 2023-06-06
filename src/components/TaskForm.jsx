@@ -1,23 +1,28 @@
 import { useState } from 'react';
 import '../styles/task-form.css';
 import { v4 as uuidv4} from 'uuid';
-// import { AiOutlinePlus} from "react-icons/ai";
+import { database } from '../firebase/firebase';
+import { ref, set } from 'firebase/database';
 
 function TaskForm(props) {
 
-  const [input, setInput] = useState('');
+  const [task, setTask] = useState('');
 
-  const handleChange = e => {
-    setInput(e.target.value);
+  const handleChange = (e)=> {
+    setTask(e.target.value);
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    const uuid = uuidv4();
     const newTask = {
-      id: uuidv4(),
-      text: input,
+      id: uuid,
+      text: task,
       done: false
     }
+    set(ref(database, `/${uuid}`), {
+      newTask,
+    })
     console.log(newTask);
     props.onSubmit(newTask);
   }
@@ -31,14 +36,9 @@ function TaskForm(props) {
           type='text'
           className='task-input'
           placeholder='Escribe una Tarea'
-          name='texto'
+          name='text'
           onChange={handleChange}
         />
-        {/* <div
-          className='task-container-icons'
-          onClick={() => }>
-        <AiOutlinePlus className='task-icons' />
-        </div> */}
         <button className='task-button'>+</button>
       </form>
     </>
