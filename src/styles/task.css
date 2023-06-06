@@ -1,16 +1,5 @@
-.main-list-container {
-  width: 600px;
-  min-height: 500px;
-  background-color: #3b3b4f;
-  padding: 25px;
-  margin: 10px;
-  border-right: 1px solid #f5f5f5;
-  border-bottom: 1px solid #f5f5f5;
-  border-bottom-right-radius: 10px;
-}
-
 .task-container {
-  width: 500px;
+  width: 100%;
   min-height: 65px;
   background-color: #1b1b32;
   margin: 5px 0;
@@ -21,6 +10,11 @@
   border-radius: 7px;
   border: 1px solid #f5f5f5;
   cursor: pointer;
+}
+
+.task-container.task-done {
+  background-color: #8f8c8f;
+  text-decoration: line-through;
 }
 
 .task-text {
@@ -36,9 +30,4 @@
   width: 25px;
   height: 25px;
   margin: 5px;
-}
-
-.task-container.task-done {
-  background-color: #5a01a7;
-  text-decoration: line-through;
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../styles/task-form.css';
 import { v4 as uuidv4} from 'uuid';
+// import { AiOutlinePlus} from "react-icons/ai";
 
 function TaskForm(props) {
 
@@ -33,7 +34,12 @@ function TaskForm(props) {
           name='texto'
           onChange={handleChange}
         />
-        <button className='task-button'>Agregar</button>
+        {/* <div
+          className='task-container-icons'
+          onClick={() => }>
+        <AiOutlinePlus className='task-icons' />
+        </div> */}
+        <button className='task-button'>+</button>
       </form>
     </>
   )

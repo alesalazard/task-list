@@ -6,12 +6,29 @@ body {
   font-size: 16px;
 }
 
-h1, p {
-  margin: 1em auto;
+.main-container-login {
+  margin-top: 150px;
+}
+
+h1 {
+  margin: 0.5em auto;
+  margin-left: 30px;
+  text-align: center;
+}
+h2 {
+  margin-top: 80px;
   text-align: center;
 }
 
+.login-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
 form {
+  margin: 0 auto;
   width: 60vw;
   max-width: 500px;
   min-width: 300px;
@@ -47,4 +64,9 @@ button {
   height: 2.5em;
   font-size: 1.1rem;
   min-width: 200px;
+}
+
+.user-create-link {
+  margin-left: 500px;
+  font-size: 15px;
 }

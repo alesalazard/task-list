@@ -28,7 +28,7 @@ function Register() {
 
   return (
     <>
-      <h1>Registro de Usuarios</h1>
+      <h2>Registro de Usuarios</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Ingrese un Correo Válido
