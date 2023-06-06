@@ -8,8 +8,9 @@
   a, li {
     list-style-type: none;
     text-decoration: none;
-    color: aliceblue;
-    font-size: 1.5rem;
+    color: rgb(140, 196, 246);
+    font-size: 15px;
+    margin-left: 5px;
   }
   
   a:hover {

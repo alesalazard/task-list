@@ -33,7 +33,7 @@ function Dashboard() {
   return (
     <div className='main-container'>
       <div className='main-list-container'>
-      <h1>Mis Tareas</h1>
+      <h1>Tareas Pendientes</h1>
         <TaskForm onSubmit={addTask} />
         <div className='task-list-container'>
           {

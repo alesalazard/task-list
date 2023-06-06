@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { getDatabase } from 'firebase/database';
 
 // Web app's Firebase configuration
 const firebaseConfig = {
@@ -22,3 +23,6 @@ export const createUser = (email, password) =>
 // User Login
 export const loginUser = (email, password) =>
   signInWithEmailAndPassword(auth, email, password)
+
+  // Initialize Realtime Database and get a reference to the service
+export const database = getDatabase(app);

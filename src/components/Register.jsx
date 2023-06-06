@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Register() {
 
   const [user, setUser] = useState({
+    login: '',
     email: '',
     password: '',
   });
@@ -28,14 +29,23 @@ function Register() {
 
   return (
     <>
-      <h1>Registro de Usuarios</h1>
+      <h2>Registro de Usuarios</h2>
       <form onSubmit={handleSubmit}>
+      <label>
+          Elija un Nombre de Usuario
+          <input
+            type='text'
+            name='text'
+            placeholder='Nombre de Usuario'
+            onChange={handleChange}
+          />
+        </label>
         <label>
           Ingrese un Correo Válido
           <input
             type='email'
             name='email'
-            placeholder='usuario@email.com'
+            placeholder='su_correo@email.com'
             onChange={handleChange}
           />
         </label>
@@ -49,15 +59,6 @@ function Register() {
           />
         </label>
         {/* falta esta validacion, solo se renderiza */}
-        <label>
-          Repita su contraseña 
-          <input
-            type='password'
-            name='password'
-            placeholder='Repita su Contraseña'
-            onChange={handleChange}
-          />
-        </label>
         <button>Registrar</button>
       </form>
     </>
