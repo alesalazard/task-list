@@ -13,14 +13,13 @@
   border-radius: 10px;
 }
 
-/* Listas de Tareas */
 .main-list-container {
   width: 600px;
   min-height: 500px;
-  background-color: #3b3b4f;
+  /* background-color: #3b3b4f; */
   padding: 25px;
   margin: 10px;
-  border-right: 2px solid #9a9a9a;
-  border-bottom: 1px solid #9a9a9a;
+  border: 1px solid #9a9a9a;
+  border-right: 4px solid #9a9a9a;
   border-radius: 10px;
 }
