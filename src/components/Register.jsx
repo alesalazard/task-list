@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { createUser } from "../firebase/firebase";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineUserAdd } from 'react-icons/ai'
+import '../styles/login.css';
 
 function Register() {
 
@@ -12,12 +14,12 @@ function Register() {
 
   const navigate = useNavigate();
   
-  const handleChange = ({ target: {name, value}}) => 
+  const handleChange = ({ target: { name, value }}) => 
     setUser({ ...user, [name]: value})
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(user.email, user.password);
+    console.log(user.login, user.email, user.password);
     try {
       await createUser (user.email, user.password);
       alert ('Usuario creado exitosamente, ahora loguéate!')
@@ -30,27 +32,28 @@ function Register() {
   return (
     <>
       <h2>Registro de Usuarios</h2>
+      <AiOutlineUserAdd className='login-icon' />
       <form onSubmit={handleSubmit}>
       <label>
-          Elija un Nombre de Usuario
+          Elige un Nombre de Usuario
           <input
             type='text'
-            name='text'
+            name='login'
             placeholder='Nombre de Usuario'
             onChange={handleChange}
           />
         </label>
         <label>
-          Ingrese un Correo Válido
+          Ingresa tu dirección de correo electrónico
           <input
             type='email'
             name='email'
-            placeholder='su_correo@email.com'
+            placeholder='tu_correo@email.com'
             onChange={handleChange}
           />
         </label>
         <label>
-          Ingrese su contraseña
+          Ingresa tu contraseña
           <input
             type='password'
             name='password'
@@ -61,6 +64,9 @@ function Register() {
         {/* falta esta validacion, solo se renderiza */}
         <button>Registrar</button>
       </form>
+      <p className='user-create-link'>
+        Volver a Login <a href='/login'>click</a>
+      </p>
     </>
   );
 }
