@@ -15,7 +15,7 @@ function Register() {
   const navigate = useNavigate();
   
   const handleChange = ({ target: { name, value }}) => 
-    setUser({ ...user, [name]: value})
+    setUser({...user, [name]: value})
 
   const handleSubmit = async (e) => {
     e.preventDefault();

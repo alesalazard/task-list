@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import '../styles/login.css';
 import { loginUser } from '../firebase/firebase';
 import { useNavigate } from 'react-router';
 import { AiOutlineTeam } from 'react-icons/ai'
+import '../styles/login.css';
 
 function Login() {
   const [user, setUser] = useState({
@@ -53,7 +53,7 @@ function Login() {
         <button>Ingresar</button>
       </form>
       <p className='user-create-link'>
-        Crea tu usuario <a href='/register'>click</a>
+        Crea tu usuario <a href='/register'>aquí</a>
       </p>
     </div>
   );

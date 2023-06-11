@@ -5,11 +5,9 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Navigation from './components/Navigation';
 import Dashboard from './components/Dashboard';
-// import { AuthProvider } from './context/authContext';
 
 function App() {
   return (
-    // <AuthProvider>
       <BrowserRouter>
       <Navigation />
         <Routes>
@@ -19,7 +17,6 @@ function App() {
           <Route path='/dashboard' element={<Dashboard />}></Route>
         </Routes>
       </BrowserRouter>
-    // </AuthProvider>
   )
 }
 
